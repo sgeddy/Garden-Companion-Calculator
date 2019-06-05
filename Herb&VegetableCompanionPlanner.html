@@ -1,0 +1,113 @@
+<HTML>
+<HEAD>
+	<TITLE>Herb & Vegetable Companion Planner</TITLE>
+
+
+	<link rel="stylesheet" href="css/bootswatch.css">
+	<link rel="stylesheet" href="css/style.css">
+
+</HEAD>
+<BODY>
+	<form class="form-group has-success" id="form">
+	<div class="title">
+		<h1>Compatibility Calculator</h1>
+	</div>
+	<br>
+	<div class="instructions"><h3 id='h3'>HOW TO USE:</h3>
+
+	<h3 id='h3'>1. Click 'Add Plant' until you have a row for each plant you would like to grow in your garden or raised bed. To delete a row, select the checkbox for that row and press 'Delete Plant'. <br>2. Select the plants you would like to grow from the dropdown in each row under the Plants column. <br>3. Click the CHECK COMPATIBILITY button when you are finished and review your results.</h3></div>
+
+	<br>
+	<div>
+	<INPUT id="button" type="button" class="bg-success" value="Add Plant" onclick="addRow('dataTable')" />
+
+	<INPUT id="button" type="button" class="bg-success" value="Remove Plant" onclick="deleteRow('dataTable')" />
+	</div>
+	<br>
+	<TABLE class="table-success" id="dataTable" width="350px" border="1" align="center">
+		<TR>
+          <TH> PLANTS </TH>
+          <TH> ENEMIES </TH>
+          <TH> FRIENDS </TH>
+          <TH> NEUTRALS </TH>
+        </TR>
+		<TR>
+			<TD>
+				<br>
+				<SELECT name="Plants">
+					<OPTION value="blank"></OPTION>
+					<OPTION value="Asparagus">Asparagus</OPTION>
+					<OPTION value="Basil">Basil</OPTION>
+					<OPTION value="Beans">Beans</OPTION>
+					<OPTION value="Beets">Beets</OPTION>
+					<OPTION value="Borage">Borage</OPTION>
+					<OPTION value="Broccoli">Broccoli</OPTION>
+					<OPTION value="Brussel Sprouts">Brussel Sprouts</OPTION>
+					<OPTION value="Cabbage">Cabbage</OPTION>
+					<OPTION value="Carrots">Carrots</OPTION>
+					<OPTION value="Cauliflower">Cauliflower</OPTION>
+					<OPTION value="Celery">Celery</OPTION>
+					<OPTION value="Cilantro / Coriander">Cilantro / Coriander</OPTION>
+					<OPTION value="Corn">Corn</OPTION>
+					<OPTION value="Cucumbers">Cucumbers</OPTION>
+					<OPTION value="Dill">Dill</OPTION>
+					<OPTION value="Eggplant">Eggplant</OPTION>
+					<OPTION value="Garlic">Garlic</OPTION>
+					<OPTION value="Kale">Kale</OPTION>
+					<OPTION value="Leeks">Leeks</OPTION>
+					<OPTION value="Lettuce">Lettuce</OPTION>
+					<OPTION value="Melons">Melons</OPTION>
+					<OPTION value="Mint">Mint</OPTION>
+					<OPTION value="Mustard">Mustard</OPTION>
+					<OPTION value="Nasturtiums">Nasturtiums</OPTION>
+					<OPTION value="Onions">Onions</OPTION>
+					<OPTION value="Parsley">Parsley</OPTION>
+					<OPTION value="Parsnips">Parsnips</OPTION>
+					<OPTION value="Peas">Peas</OPTION>
+					<OPTION value="Peppers">Peppers</OPTION>
+					<OPTION value="Pole Beans">Pole Beans</OPTION>
+					<OPTION value="Potatoes">Potatoes</OPTION>
+					<OPTION value="Radishes">Radishes</OPTION>
+					<OPTION value="Rosemary">Rosemary</OPTION>
+					<OPTION value="Sage">Sage</OPTION>
+					<OPTION value="Spinach">Spinach</OPTION>
+					<OPTION value="Squash">Squash</OPTION>
+					<OPTION value="Strawberries">Strawberries</OPTION>
+					<OPTION value="Sunflowers">Sunflowers</OPTION>
+					<OPTION value="Thyme">Thyme</OPTION>
+					<OPTION value="Tomatoes">Tomatoes</OPTION>
+					<OPTION value="Turnips">Turnips</OPTION>
+				</SELECT>
+				<br>
+                <INPUT id="remove" type="checkbox" name="chk"/>
+                <label for="remove">Remove</label>
+			</TD>
+			<TD> </TD>
+			<TD> </TD>
+			<TD> </TD>
+		</TR>
+	</TABLE>
+
+	<p>
+	<br>
+	<input id="button" type="button" class="bg-success" onclick= "checkCompatibility('dataTable')" value="CHECK COMPATIBILITY">
+	<br>
+	<br>
+	<input id="button" type="button" class="bg-success" onclick= "setInterval(forecast, 5000);" value="SHOW FORECAST"> 
+	</p>
+
+	<p id="noSelection"> </p>
+	<p id="COMPATIBILITY"> </p>
+	<p id="forecast"> </p>
+	<p id="test"> </p>
+	</form>
+
+	<!--JavaScript at end of body for optimized loading-->
+	<script src="js/addRow.js"></script>
+	<script src="js/deleteRow.js"></script>
+	<script src="js/checkCompatibility.js"></script>
+	<script src="js/forecast.js"></script>
+	<script src="js/changePage.js"></script>
+
+</BODY>
+</HTML>
